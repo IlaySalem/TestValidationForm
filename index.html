@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Validation Form</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+</head>
+
+<body>
+<div class="loader">
+		<div class="loader_inner"></div>
+</div>
+
+<div class="parent">
+	<div class="container">
+		<div class="col-md-12 ">
+			<div class="raw">
+				<div class="ValidationBackground">
+					<div class="col-md-12 ">
+						<h3>Validation form</h3>
+
+<!--
+						<script type="text/javascript">
+							function validateFormOnSubmit(theForm) {
+						    var reason = "";
+						    reason += validateName(theForm.name);
+						    reason += validatePhone(theForm.phone);
+						    reason += validateEmail(theForm.emaile);
+
+						    if (reason != "") {
+						        alert("Some fields need correction:\n" + reason);
+						    } else {
+						        simpleCart.checkout();
+						    }
+						    return false;
+						}
+		как следовало бы переделать
+						</script>
+						<html>
+							<form action="#" onsubmit="return validateFormOnSubmit(this);">
+						</html>
+-->							
+							<form id="myForm"  action="" class="main_form" method="get" novalidate  >
+							
+								<div class="form-group has-feedback nameBlock">
+									<label class="control-label" for="fio">	
+										<input id="fio" type="text" name="fio" placeholder="ФИО" class="form-control" aria-describedby="inputSuccess2Status"/>
+									</label>
+								</div>
+								<div class="form-group has-feedback emailBlock">
+									<label class="control-label" for="email">
+										<input id="email" type="email" name="email" placeholder="E-mail" class="form-control" aria-describedby="inputSuccess2Status"/>
+									</label>
+								</div>
+								<div class="form-group has-feedback phoneBlock">
+									<label class="control-label" for="phone">						
+										<input id="phone" type="text" name="phone" placeholder="Телефон +7(999)999-99-99" class="form-control" aria-describedby="inputSuccess2Status"/>
+									</label>
+								</div>
+								
+								<button id="submitButton" class="btn btn-success btn-lg" name="submit" type="submit" disabled>Отправить</button>
+								
+								<div id="resultContainer" class="result" >
+									<h1>Result</h1>
+								</div>
+
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="libs/jquery/jquery-2.1.3.min.js"></script>
+<!-- <script src="libs/jqBootstrapValidation/jqBootstrapValidation.js"></script> -->
+<!-- <script src="js/common.js"></script> -->
+<script src="index.js"></script> 
+<script src="answer/success.json"></script>
+<script src="answer/error.json"></script>
+<script src="answer/progress.json"></script>
+
+</body>
+</html>
+
+
+
+<!-- <form id="myForm" action="" class="main_form" method="post" name="test"  >
+							
+								
+								<label class="form-group hasError">	
+									<input id="fio" type="text" name="fio" placeholder="ФИО" data-rule="required FIO" />
+									<span class="help-block text-danger"></span>
+								</label>
+								
+								<label class="form-group">
+									<input id="email" type="email" name="email" placeholder="E-mail" data-rule="required email"/>
+									<span class="help-block text-danger"></span>
+								</label>
+
+								<label class="form-group">						
+									<input id="phone" type="number" name="phone" placeholder="Телефон +7(999)999-99-99" data-validation-required-message="Вы не ввели номер телефона" data-rule = "required phone" />
+									<span class="help-block text-danger"></span>
+								</label>
+								
+
+								<button id="submitButton" name="submit">Отправить</button>
+								
+
+
+								<div id="resultContainer" class="result" >
+									<textarea name="message" placeholder="result container">
+									</textarea>
+									<span class="help-block text-danger"></span>
+								</div>
+
+							
+							</form> -->
